@@ -1,11 +1,12 @@
-<html>
-    <head>
-            <title>Randomly Pair Names</title>
-            <script type="text/javascript" src="js/scripts.js"></script>
-            <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
-            <link rel="stylesheet" type="text/css" href="/css/styles.css">
-    </head>
-    <body>
-        
-    </body>
-</html>
+<div class="transparent">
+    <form method='post' action='/shuffle'>
+        <div class="header">
+            Have names you would like randomly paired?<br>
+            Enter them below!</div>
+        <div id="boxes"></div><br>
+        <button>Randomize those names!</button>
+    </form><br>
+    <div id="randomNames">
+    <%=name_list%>
+    </div>
+</div>

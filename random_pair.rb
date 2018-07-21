@@ -1,4 +1,10 @@
 def pair(names)
+    unless names.is_a?(Array)
+        return false
+    end
+    unless names[0].is_a?(String)
+        return false
+    end
     list = []
     first_names = []
     last_names = []
