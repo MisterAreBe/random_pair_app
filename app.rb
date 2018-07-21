@@ -7,7 +7,6 @@ get '/' do
   names = session[:names] || []
   name_list = ''
   br = '<br>'
-  names.compact!
   names.each do |v|
     unless v.is_a?(Array)
       name_list += v
@@ -23,6 +22,7 @@ end
 
 post '/shuffle' do
   names = params[:names] || []
+  names.delete_at(-1)
   session[:names] = pair(names)
   redirect '/'
 end
