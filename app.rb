@@ -11,7 +11,6 @@ get '/' do
     unless v.is_a?(Array)
       name_list += v
     else
-      v.compact!
       list = v.join(' ')
       name_list += list
     end
