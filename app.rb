@@ -22,7 +22,10 @@ end
 post '/shuffle' do
   names = params[:names] || []
   if names.include?("")
-    names.delete_at(-1)
+    while names.include?("")
+      del = names.index("")
+      names.delete_at(del)
+    end
   end
   session[:names] = pair(names)
   redirect '/'
