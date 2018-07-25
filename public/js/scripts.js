@@ -20,3 +20,8 @@ function addBox() {
     box.addEventListener("keydown", addBox, true);
     add.appendChild(box);
 }
+
+function removeBox(){
+    var badBox = document.getElementById("boxes");
+    badBox.removeChild(badBox.lastChild);
+}

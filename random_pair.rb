@@ -1,10 +1,8 @@
 def pair(names)
-    unless names.is_a?(Array)
-        return false
-    end
-    unless names[0].is_a?(String)
-        return false
-    end
+    unless names.is_a?(Array); return false; end
+    unless names[0].is_a?(String); return false; end
+    
+    if names.length <= 1; return names; end
 
     list = []
     first_names = []
