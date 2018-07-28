@@ -2,13 +2,17 @@
     <form method='post' action='/shuffle'>
         <div class="header">
             Have names you would like randomly paired?<br>
-            Enter them below!</div>
-        <button type="button" onclick="removeBox()">Remove Box</button>
-        <button type="button" onclick="addBox()">Add Box</button>
-        <button>Randomize those names!</button>
-        <div id="boxes"></div><br>
+            Enter them below!
+        </div>
+        <button type="button" onclick="removeBox()">Remove A Box</button>
+        <input type="number" id="numBoxes" oninput="addBox()" min="0" placeholder="Add Boxes">
+        <button type="button" onclick="removeAllBoxes()">Remove All Boxes</button><br><br>
+        <div id="box">
+            <button>Randomize those names!</button><br><br>
+        </div><br>
+        <div id="boxes"></div>
     </form><br>
     <div id="randomNames">
-    <%=name_list%>
+        <%=name_list%>
     </div>
 </div>
